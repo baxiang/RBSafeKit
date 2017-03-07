@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RBSafeKit_Example' do
+  pod 'RBSafeKit', :path => '../'
+
+  target 'RBSafeKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
