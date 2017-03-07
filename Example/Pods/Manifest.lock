@@ -1,0 +1,16 @@
+PODS:
+  - RBSafeKit (0.1.0)
+
+DEPENDENCIES:
+  - RBSafeKit (from `../`)
+
+EXTERNAL SOURCES:
+  RBSafeKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RBSafeKit: e47168d426bdfcdc200d746d286e418d6dd7461d
+
+PODFILE CHECKSUM: b30012c447ca0a837a56879eb47d61be9dd17506
+
+COCOAPODS: 1.2.0

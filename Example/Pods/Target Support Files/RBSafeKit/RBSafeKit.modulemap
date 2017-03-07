@@ -1,0 +1,6 @@
+framework module RBSafeKit {
+  umbrella header "RBSafeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
