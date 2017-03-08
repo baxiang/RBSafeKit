@@ -32,7 +32,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "RBSafeKit"
 ```
-
+## Version
+V1.0.0
+字符串(NSString、NSMutableString、NSAttributedString、NSMutableAttributedString)、数组(NSArray、NSMutableArray、NSSet、NSMutableSet)、字典（NSDictionary、NSMutableDictionary） 非法参数和越界的crash保护
 ## Author
 
 baxiang, baxiang1989@163.com
