@@ -7,7 +7,7 @@
 //
 
 #import "NSDictionary+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSDictionary (RBSafe)
 
 +(void)load  {
@@ -15,7 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        [RBSafeKit exchangeClassMethod:self methodOriginSel:@selector(dictionaryWithObjects:forKeys:count:) methodAddSel:@selector(RBSafe_dictionaryWithObjects:forKeys:count:)];
+        [NSDictionary swizzleClass:self origMethod:@selector(dictionaryWithObjects:forKeys:count:) withMethod:@selector(RBSafe_dictionaryWithObjects:forKeys:count:)];
     });
 }
 

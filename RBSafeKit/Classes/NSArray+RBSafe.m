@@ -7,47 +7,42 @@
 //
 
 #import "NSArray+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSArray (RBSafe)
 
 +(void)load{
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [RBSafeKit exchangeClassMethod:[self class] methodOriginSel:@selector(arrayWithObjects:count:) methodAddSel:@selector(RBSafe_arrayWithObjects:count:)];
+
+        Class __NSPlaceholderArray = NSClassFromString(@"__NSPlaceholderArray");
+        [NSArray swizzleInstance:__NSPlaceholderArray origMethod:@selector(initWithObjects:count:) withMethod:@selector(RBSafe_initWithObjects:count:)];
+        
         Class __NSArray = NSClassFromString(@"NSArray");
-        Class __NSArrayI = NSClassFromString(@"__NSArrayI");
-        Class __NSSingleObjectArrayI = NSClassFromString(@"__NSSingleObjectArrayI");
-        Class __NSArray0 = NSClassFromString(@"__NSArray0");
+        Class __NSArrayI = NSClassFromString(@"__NSArrayI");//数组有内容obj类型才是__NSArrayI
+        Class __NSSingleObjectArrayI = NSClassFromString(@"__NSSingleObjectArrayI");//iOS10 以上，单个内容类型是__NSArraySingleObjectI
+        Class __NSArray0 = NSClassFromString(@"__NSArray0");//iOS9 以上，没内容类型是__NSArray0
         
-        [RBSafeKit exchangeInstanceMethod:__NSArray methodOriginSel:@selector(objectAtIndexedSubscript:) methodAddSel:@selector(RBSafe_objectAtIndexedSubscript:)];
+        [NSArray swizzleInstance:__NSArray origMethod:@selector(subarrayWithRange:) withMethod:@selector(RBSafe_subarrayWithRange:)];
         
-        [RBSafeKit exchangeInstanceMethod:__NSArray methodOriginSel:@selector(objectsAtIndexes:) methodAddSel:@selector(RBSafe_objectsAtIndexes:)];
+        [NSArray swizzleInstance:__NSArray origMethod:@selector(objectsAtIndexes:) withMethod:@selector(RBSafe_objectsAtIndexes:)];
+   
+        [NSArray swizzleInstance:__NSArrayI origMethod:@selector(objectAtIndex:) withMethod:@selector(RBSafe_NSArrayIobjectAtIndex:)];
         
-        [RBSafeKit exchangeInstanceMethod:__NSArrayI methodOriginSel:@selector(objectAtIndex:) methodAddSel:@selector(RBSafe_NSArrayIObjectAtIndex:)];
+        [NSArray swizzleInstance:__NSSingleObjectArrayI origMethod:@selector(objectAtIndex:) withMethod:@selector(RBSafe_NSSingleObjectArrayIobjectAtIndex:)];
         
-        [RBSafeKit exchangeInstanceMethod:__NSSingleObjectArrayI methodOriginSel:@selector(objectAtIndex:) methodAddSel:@selector(RBSafe_NSSingleObjectArrayIObjectAtIndex:)];
+        [NSArray swizzleInstance:__NSArray0 origMethod:@selector(objectAtIndex:) withMethod:@selector(RBSafe_NSArray0ObjectAtIndex:)];
         
-        [RBSafeKit exchangeInstanceMethod:__NSArray0 methodOriginSel:@selector(objectAtIndex:) methodAddSel:@selector(RBSafe_NSArray0ObjectAtIndex:)];
-        
-        [RBSafeKit exchangeInstanceMethod:__NSArray methodOriginSel:@selector(getObjects:range:) methodAddSel:@selector(RBSafe_NSArrayGetObjects:range:)];
-        
-        [RBSafeKit exchangeInstanceMethod:__NSSingleObjectArrayI methodOriginSel:@selector(getObjects:range:) methodAddSel:@selector(RBSafe_NSSingleObjectArrayIGetObjects:range:)];
-        
-        [RBSafeKit exchangeInstanceMethod:__NSArrayI methodOriginSel:@selector(getObjects:range:) methodAddSel:@selector(RBSafe_NSArrayIGetObjects:range:)];
     });
 }
 
 
 #pragma mark - instance array
-
-
-+ (instancetype)RBSafe_arrayWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
-    
+- (instancetype)RBSafe_initWithObjects:(const id _Nonnull [_Nullable])objects count:(NSUInteger)cnt{
     id instance = nil;
     
     @try {
-        instance = [self RBSafe_arrayWithObjects:objects count:cnt];
+        instance = [self RBSafe_initWithObjects:objects count:cnt];
     }
     @catch (NSException *exception) {
         
@@ -61,21 +56,19 @@
                 newObjsIndex++;
             }
         }
-        instance = [self RBSafe_arrayWithObjects:newObjects count:newObjsIndex];
+        instance = [self RBSafe_initWithObjects:newObjects count:newObjsIndex];
     }
     @finally {
         return instance;
     }
+
 }
 
 
-
-#pragma mark - objectAtIndexedSubscript:
-
-- (id)RBSafe_objectAtIndexedSubscript:(NSUInteger)idx {
+- (id)RBSafe_subarrayWithRange:(NSRange)range{
     id object = nil;
     @try {
-        object = [self RBSafe_objectAtIndexedSubscript:idx];
+        object = [self RBSafe_subarrayWithRange:range];
     }
     @catch (NSException *exception) {
         
@@ -85,7 +78,6 @@
         return object;
     }
 }
-
 
 #pragma mark - objectsAtIndexes:
 - (NSArray *)RBSafe_objectsAtIndexes:(NSIndexSet *)indexes {
@@ -105,11 +97,11 @@
 #pragma mark - objectAtIndex:
 
 //__NSArrayI  objectAtIndex:
-- (id)RBSafe_NSArrayIObjectAtIndex:(NSUInteger)index {
+- (id)RBSafe_NSArrayIobjectAtIndex:(NSUInteger)index {
     id object = nil;
     
     @try {
-        object = [self RBSafe_NSArrayIObjectAtIndex:index];
+        object = [self RBSafe_NSArrayIobjectAtIndex:index];
     }
     @catch (NSException *exception) {
         
@@ -122,11 +114,11 @@
 
 
 //__NSSingleObjectArrayI objectAtIndex:
-- (id)RBSafe_NSSingleObjectArrayIObjectAtIndex:(NSUInteger)index {
+- (id)RBSafe_NSSingleObjectArrayIobjectAtIndex:(NSUInteger)index {
     id object = nil;
     
     @try {
-        object = [self RBSafe_NSSingleObjectArrayIObjectAtIndex:index];
+        object = [self RBSafe_NSSingleObjectArrayIobjectAtIndex:index];
     }
     @catch (NSException *exception) {
         
@@ -148,51 +140,6 @@
     }
     @finally {
         return object;
-    }
-}
-
-
-#pragma mark - getObjects:range:
-
-//NSArray getObjects:range:
-- (void)RBSafe_NSArrayGetObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range {
-    
-    @try {
-        [self RBSafe_NSArrayGetObjects:objects range:range];
-    } @catch (NSException *exception) {
-        
-        
-        
-    } @finally {
-        
-    }
-}
-
-
-//__NSSingleObjectArrayI  getObjects:range:
-- (void)RBSafe_NSSingleObjectArrayIGetObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range {
-    
-    @try {
-        [self RBSafe_NSSingleObjectArrayIGetObjects:objects range:range];
-    } @catch (NSException *exception) {
-        
-       
-        
-    } @finally {
-        
-    }
-}
-
-//__NSArrayI  getObjects:range:
-- (void)RBSafe_NSArrayIGetObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range {
-    
-    @try {
-        [self RBSafe_NSArrayIGetObjects:objects range:range];
-    } @catch (NSException *exception) {
-        
-        
-    } @finally {
-        
     }
 }
 

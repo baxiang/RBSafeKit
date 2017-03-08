@@ -5,11 +5,24 @@
 [![License](https://img.shields.io/cocoapods/l/RBSafeKit.svg?style=flat)](http://cocoapods.org/pods/RBSafeKit)
 [![Platform](https://img.shields.io/cocoapods/p/RBSafeKit.svg?style=flat)](http://cocoapods.org/pods/RBSafeKit)
 
-## Example
+##   nil NULL 空值处理【NSInvalidArgumentException】
+1.*** -[__NSPlaceholderArray initWithObjects:count:]: attempt to insert nil object from objects[0]'
+2.***  setObjectForKey: object cannot be nil (key: key)
+3.*** +[NSString stringWithUTF8String:]: NULL cString
+4.*** +[NSString stringWithCString:encoding:]: NULL cString
+5.*** -[__NSCFConstantString stringByAppendingString:]: nil argument';
+6.*** -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]'
+7.*** - -[__NSDictionaryM removeObjectForKey:]: key cannot be nil'
+8.*** -[__NSPlaceholderSet initWithObjects:count:]: attempt to insert nil object from objects[0]'
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+##  越界【NSRangeException】
+1.*** -[__NSSingleObjectArrayI objectAtIndex:]: index 4 beyond bounds [0 .. 0]
+2.***-[NSArray subarrayWithRange:]: range {50, 100} extends beyond bounds [0 .. 2]
+3.*** -[__NSArrayM removeObjectsInRange:]: range {50, 10} extends beyond bounds [0 .. 2]
+4.*** -[__NSCFConstantString substringFromIndex:]: Index 50 out of bounds; string length 10
 
-## Requirements
+
+## object cannot be ni
 
 ## Installation
 

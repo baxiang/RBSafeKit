@@ -7,7 +7,7 @@
 //
 
 #import "NSMutableAttributedString+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSMutableAttributedString (RBSafe)
 +(void)load {
     
@@ -17,10 +17,10 @@
         Class NSConcreteMutableAttributedString = NSClassFromString(@"NSConcreteMutableAttributedString");
         
         //initWithString:
-        [RBSafeKit exchangeInstanceMethod:NSConcreteMutableAttributedString methodOriginSel:@selector(initWithString:) methodAddSel:@selector(RBSafe_initWithString:)];
+        [NSMutableAttributedString swizzleInstance:NSConcreteMutableAttributedString origMethod:@selector(initWithString:) withMethod:@selector(RBSafe_initWithString:)];
         
         //initWithString:attributes:
-        [RBSafeKit exchangeInstanceMethod:NSConcreteMutableAttributedString methodOriginSel:@selector(initWithString:attributes:) methodAddSel:@selector(RBSafe_initWithString:attributes:)];
+        [NSMutableAttributedString swizzleInstance:NSConcreteMutableAttributedString origMethod:@selector(initWithString:attributes:) withMethod:@selector(RBSafe_initWithString:attributes:)];
     });
 }
 

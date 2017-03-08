@@ -7,27 +7,23 @@
 //
 
 #import "NSAttributedString+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSAttributedString (RBSafe)
 +(void)load {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        
-        
-        
-        
         Class NSConcreteAttributedString = NSClassFromString(@"NSConcreteAttributedString");
         
         //initWithString:
-        [RBSafeKit exchangeInstanceMethod:NSConcreteAttributedString methodOriginSel:@selector(initWithString:) methodAddSel:@selector(RBSafe_initWithString:)];
+        [NSAttributedString swizzleInstance:NSConcreteAttributedString origMethod:@selector(initWithString:) withMethod:@selector(RBSafe_initWithString:)];
         
         //initWithAttributedString
-        [RBSafeKit exchangeInstanceMethod:NSConcreteAttributedString methodOriginSel:@selector(initWithAttributedString:) methodAddSel:@selector(RBSafe_initWithAttributedString:)];
+        [NSAttributedString swizzleInstance:NSConcreteAttributedString origMethod:@selector(initWithAttributedString:) withMethod:@selector(RBSafe_initWithAttributedString:)];
         
         //initWithString:attributes:
-        [RBSafeKit exchangeInstanceMethod:NSConcreteAttributedString methodOriginSel:@selector(initWithString:attributes:) methodAddSel:@selector(RBSafe_initWithString:attributes:)];
+        [NSAttributedString swizzleInstance:NSConcreteAttributedString origMethod:@selector(initWithString:attributes:) withMethod:@selector(RBSafe_initWithString:attributes:)];
     });
     
 }

@@ -7,32 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0790C47FCF78E469E1162ED5BC71B2F7 /* NSAttributedString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 73E4D3644B3A0E2420CA24A103511381 /* NSAttributedString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11A7782F61E99E9BA69580CA44720080 /* NSMutableAttributedString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F777573980A146D12EDCA3D37BEAB14 /* NSMutableAttributedString+RBSafe.m */; };
+		06152F5605738C34481390655B9862A7 /* NSMutableSet+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6627F8F3457DE26F675F540D960E8566 /* NSMutableSet+RBSafe.m */; };
+		0AFA4C9F95C13B81F68F827D0870B3AB /* NSMutableArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7323AAA0A7FC77CD23E670ED73051 /* NSMutableArray+RBSafe.m */; };
+		11C65B7BABE8E1556E556E06935990CB /* NSArray+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CC79FAB685D61D64E5EEE907B270C2 /* NSArray+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1947DE8F06BB495C843BC4B35C9B422F /* Pods-RBSafeKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A13524B2A3C0BCAEC81F58B8FD253F1F /* Pods-RBSafeKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B43D925270FC13CF5CBDA1920EDFAED /* NSDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 028C9BF6F36E740662F28C0136B434C1 /* NSDictionary+RBSafe.m */; };
-		420CF6899F1909CABFFA79DE7FCED610 /* NSString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B1EAAA7594ED7C464A8F60E543C3C8 /* NSString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45A5A4DEF368A384D178C63FACD767D9 /* RBSafeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0B57F9EE769D02DF1BC4E3830AA0E2 /* RBSafeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BE26B6BCB872EA2BCE23AA2472689E6 /* NSMutableArray+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDF00BC3C1CE11154F8D18E8685F5A1 /* NSMutableArray+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CC6E82A66E1CDA3547045DC60CDE9A0 /* NSMutableString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 08B2D4498DDD4449EF0F8E78EA2217B0 /* NSMutableString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50517BC1C361EE233593B424E17156CB /* NSArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EE1F7CF5648ED47BF456490981D66E /* NSArray+RBSafe.m */; };
-		5EC20D95AD67524BD77FBD37939181E4 /* NSArray+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = B2DB5188D7DFC3C365F1D8319F649514 /* NSArray+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67348F5E727630DCB3AF7735221F5542 /* NSDictionary+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB054F3787374732E5F69992704C127 /* NSDictionary+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205342F24226C4C4102D2B51BD6EE357 /* NSMutableAttributedString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = ED55E7E13BEF8105B64483228C796666 /* NSMutableAttributedString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		231DE06DE601CEBE0B9DAFB6AA0DE7DB /* NSMutableString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF1B6F8A4BF58DB8E53A02F95B7C4CD /* NSMutableString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CBCB97B5C036A3F74B887FE957667C5 /* NSMutableSet+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 619FFFAF9FE17438D51C672264CB7B7D /* NSMutableSet+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31B874F5AA941FB50A4CD61A90499205 /* NSAttributedString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 089ACC22700F3F0A390A0B5B311956EE /* NSAttributedString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E1DD7D2022AFCD6FB6E9717EAE51B36 /* NSString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = A51A0EF07354C3D86DF11E4AC76AF418 /* NSString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45BE8EE037439B27AC1039539A13475D /* NSString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E912486926F1DEC1550AE001B7CC305 /* NSString+RBSafe.m */; };
+		4A42EAD8552A4D0A9095BCEA36C1CF8A /* NSAttributedString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C70FF41E7955F54FDA22C0A01716255 /* NSAttributedString+RBSafe.m */; };
+		4A5EE94C60BA1A84F3D9BC23AB0437F9 /* NSDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 57745CE5A26F47DFB9FB850C95A27060 /* NSDictionary+RBSafe.m */; };
+		52504A55A259C388C47FEA203EEEF8E4 /* NSObject+RBSafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E33C56B22EF371074158A7D4067AA797 /* NSObject+RBSafeSwizzle.m */; };
 		698019B51A61216AFE7A83639990B5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		69E9D9A62BC2C0798336747031E9CA43 /* NSMutableAttributedString+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE1E5ECC657DD83183E97AEF29B044F /* NSMutableAttributedString+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DEC2F514E00D4051853622D4668FB35 /* NSAttributedString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A69CF58425DF39106F65074CC363BCDA /* NSAttributedString+RBSafe.m */; };
 		83B27A6AC9DEAB7ADE6BAC2D9FBED930 /* Pods-RBSafeKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B2A25FB9D15731A21E994C77D11084 /* Pods-RBSafeKit_Example-dummy.m */; };
-		94B6EDB752AFFECFAA0779E8253AD389 /* NSMutableArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDD000291F62B41239A6F96809DC29 /* NSMutableArray+RBSafe.m */; };
+		85A2AF27D7E547A27CE7003E90FC8347 /* NSMutableDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C498B9201DE37AFE0A503F58D4BDDD3C /* NSMutableDictionary+RBSafe.m */; };
+		88A0C81E770162F11FF51496B356524B /* NSMutableArray+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0644CABED9016919B7E03AED943A61 /* NSMutableArray+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		958DFED94588780964D19167847A49DA /* NSMutableString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E4EE56FFD8E511EC7994B98AD63A00 /* NSMutableString+RBSafe.m */; };
+		95C8B593521A6DC496C0A4C463B8578A /* RBSafeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C19FC2C620C7EF45DC94D422F9325E /* RBSafeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A1D986E621151D6308BFDA84B263939 /* Pods-RBSafeKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0527504A03CBFB3684033F13D6D05F0 /* Pods-RBSafeKit_Tests-dummy.m */; };
-		9FD8E27481CBE8B4303B317A0C6CBD31 /* NSMutableDictionary+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0B4028BDD1779BB5ED95972FAA8A26 /* NSMutableDictionary+RBSafe.m */; };
+		9A7B4D788CEE9D648948207D695F9ED3 /* NSSet+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 104EAA8E0FA0F72836BBF61704151CDF /* NSSet+RBSafe.m */; };
+		A9DEF2EBE3C3FAE40D0B673827071056 /* NSArray+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0897CA11FC2BFBD59B591401C227C0 /* NSArray+RBSafe.m */; };
 		AD6F99C5B9757CF8C3DBDE2A1FBECB9F /* Pods-RBSafeKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CE37B48DF65B8BC4977B94F43FE1A7 /* Pods-RBSafeKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFB6D5C54E941BD2083707F4C8479F04 /* NSMutableDictionary+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF3487960018DD0F3830F8C2E0C7B50 /* NSMutableDictionary+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B269EE12B63BF04DEEC2CEAE264E1FF2 /* RBSafeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C19FC2C620C7EF45DC94D422F9325E /* RBSafeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9F8FD0625BBD953DA6F06D4CB3C2BE /* RBSafeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8AC4889C9F6BFDFF0046A5AD0CF5ED /* RBSafeKit-dummy.m */; };
+		C25BC6202B0EA8C8C4018CACC756A8F4 /* NSMutableDictionary+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E1B3E64681C0DB2898714A6CDDED54 /* NSMutableDictionary+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8CC3C343BEB2DA36AFF45BEA04111C3 /* NSMutableAttributedString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 386D64A21EFED2F80D5CBDE75DFB0181 /* NSMutableAttributedString+RBSafe.m */; };
 		D068FB024D65B7D8A95064BC2E6A8852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DB5403B6C7656ADC553AF05F95409221 /* NSString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B6B5D636A59E6AF1DEFF0D67119235 /* NSString+RBSafe.m */; };
-		DC6D07E97E0C235B55B30D5EAB4AEFCA /* RBSafeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8AC4889C9F6BFDFF0046A5AD0CF5ED /* RBSafeKit-dummy.m */; };
-		E64B1D9525FB236B9127B6ED2FCE8D0E /* RBSafeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AF8A966EFD6FDA3D61CC54DCF09B7 /* RBSafeKit.m */; };
-		EDFAE2CFCC80155409598F1C67CEC520 /* NSMutableString+RBSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CAF001E37EA3E38F6C1D6A3359681F /* NSMutableString+RBSafe.m */; };
+		DD8C2B6D7587327FA7DA589C5782978F /* NSObject+RBSafeSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D00D806A1E8D29580BF495A5BA11DF4 /* NSObject+RBSafeSwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E10782E5E6E6F2920EA7BE126D44F876 /* NSDictionary+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9FC4E6AA4072BC112473A4B7B1C123 /* NSDictionary+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3A55043D8FF94F392B966F0542F7982 /* NSSet+RBSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 65AE655E60FDA46C34316C2C53E21D1D /* NSSet+RBSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F839AD7C17A5E69C89009FB492670FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,55 +51,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		028C9BF6F36E740662F28C0136B434C1 /* NSDictionary+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RBSafe.m"; sourceTree = "<group>"; };
 		07CE37B48DF65B8BC4977B94F43FE1A7 /* Pods-RBSafeKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RBSafeKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		08B2D4498DDD4449EF0F8E78EA2217B0 /* NSMutableString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+RBSafe.h"; sourceTree = "<group>"; };
-		0EBDD000291F62B41239A6F96809DC29 /* NSMutableArray+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+RBSafe.m"; sourceTree = "<group>"; };
-		15E13FB1D37B548303A1BF510DA0ADFE /* Pods-RBSafeKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RBSafeKit_Tests.modulemap"; sourceTree = "<group>"; };
-		2108CD7FE5F97C1C20CE4B3699F2FD7D /* Pods_RBSafeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSafeKit_Example.framework; path = "Pods-RBSafeKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		256AF8A966EFD6FDA3D61CC54DCF09B7 /* RBSafeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RBSafeKit.m; sourceTree = "<group>"; };
+		089ACC22700F3F0A390A0B5B311956EE /* NSAttributedString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RBSafe.h"; sourceTree = "<group>"; };
+		104EAA8E0FA0F72836BBF61704151CDF /* NSSet+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSSet+RBSafe.m"; sourceTree = "<group>"; };
+		15E13FB1D37B548303A1BF510DA0ADFE /* Pods-RBSafeKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RBSafeKit_Tests.modulemap"; sourceTree = "<group>"; };
+		2108CD7FE5F97C1C20CE4B3699F2FD7D /* Pods_RBSafeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBSafeKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29876837A6F0BD6FBB2D26CBE79540E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38E801FB49099A2D24A64658F538C053 /* Pods-RBSafeKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RBSafeKit_Example.modulemap"; sourceTree = "<group>"; };
+		386D64A21EFED2F80D5CBDE75DFB0181 /* NSMutableAttributedString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RBSafe.m"; sourceTree = "<group>"; };
+		38E801FB49099A2D24A64658F538C053 /* Pods-RBSafeKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RBSafeKit_Example.modulemap"; sourceTree = "<group>"; };
 		40D2B6355954FB86832BFF507C1966FE /* Pods-RBSafeKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSafeKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4E0B57F9EE769D02DF1BC4E3830AA0E2 /* RBSafeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RBSafeKit.h; sourceTree = "<group>"; };
-		5AB054F3787374732E5F69992704C127 /* NSDictionary+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RBSafe.h"; sourceTree = "<group>"; };
+		40E4EE56FFD8E511EC7994B98AD63A00 /* NSMutableString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+RBSafe.m"; sourceTree = "<group>"; };
+		4D00D806A1E8D29580BF495A5BA11DF4 /* NSObject+RBSafeSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+RBSafeSwizzle.h"; sourceTree = "<group>"; };
+		57745CE5A26F47DFB9FB850C95A27060 /* NSDictionary+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RBSafe.m"; sourceTree = "<group>"; };
 		5BE3C946CE7D7A671A8B6B5BB0B875C2 /* Pods-RBSafeKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RBSafeKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5F0B4028BDD1779BB5ED95972FAA8A26 /* NSMutableDictionary+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+RBSafe.m"; sourceTree = "<group>"; };
+		5E912486926F1DEC1550AE001B7CC305 /* NSString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+RBSafe.m"; sourceTree = "<group>"; };
 		5FF4BB4D77E14A01B14ECC668D888226 /* Pods-RBSafeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSafeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		648B8A849723B3E61BF377F50504B4DC /* RBSafeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBSafeKit.framework; path = RBSafeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F777573980A146D12EDCA3D37BEAB14 /* NSMutableAttributedString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RBSafe.m"; sourceTree = "<group>"; };
-		73E4D3644B3A0E2420CA24A103511381 /* NSAttributedString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RBSafe.h"; sourceTree = "<group>"; };
+		619FFFAF9FE17438D51C672264CB7B7D /* NSMutableSet+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+RBSafe.h"; sourceTree = "<group>"; };
+		648B8A849723B3E61BF377F50504B4DC /* RBSafeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBSafeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AE655E60FDA46C34316C2C53E21D1D /* NSSet+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSSet+RBSafe.h"; sourceTree = "<group>"; };
+		6627F8F3457DE26F675F540D960E8566 /* NSMutableSet+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+RBSafe.m"; sourceTree = "<group>"; };
+		67CC79FAB685D61D64E5EEE907B270C2 /* NSArray+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+RBSafe.h"; sourceTree = "<group>"; };
 		79D62AB1F2E57F1424EB66F126505015 /* Pods-RBSafeKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSafeKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7EF3487960018DD0F3830F8C2E0C7B50 /* NSMutableDictionary+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+RBSafe.h"; sourceTree = "<group>"; };
-		81337038ACB9F71DBCA3AFBAD1FAD32E /* Pods_RBSafeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSafeKit_Tests.framework; path = "Pods-RBSafeKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C0644CABED9016919B7E03AED943A61 /* NSMutableArray+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+RBSafe.h"; sourceTree = "<group>"; };
+		81337038ACB9F71DBCA3AFBAD1FAD32E /* Pods_RBSafeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RBSafeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8585B85CE8B25316213FE087B6B5FFB5 /* Pods-RBSafeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSafeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		898B4CBC539AAD5EF9ED4E3A00A3D954 /* Pods-RBSafeKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RBSafeKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8EE7BE845FEA583E20B6DC1F26F2379F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F92401CD5110AE0E4B1F2A18BD1AF65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C70FF41E7955F54FDA22C0A01716255 /* NSAttributedString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RBSafe.m"; sourceTree = "<group>"; };
 		9ECB99FCA7EB15A8707811B6B864B52D /* Pods-RBSafeKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSafeKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		A0B1EAAA7594ED7C464A8F60E543C3C8 /* NSString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+RBSafe.h"; sourceTree = "<group>"; };
 		A13524B2A3C0BCAEC81F58B8FD253F1F /* Pods-RBSafeKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RBSafeKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A69CF58425DF39106F65074CC363BCDA /* NSAttributedString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RBSafe.m"; sourceTree = "<group>"; };
-		AEE1E5ECC657DD83183E97AEF29B044F /* NSMutableAttributedString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+RBSafe.h"; sourceTree = "<group>"; };
-		B2DB5188D7DFC3C365F1D8319F649514 /* NSArray+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+RBSafe.h"; sourceTree = "<group>"; };
+		A51A0EF07354C3D86DF11E4AC76AF418 /* NSString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+RBSafe.h"; sourceTree = "<group>"; };
 		B7C19FC2C620C7EF45DC94D422F9325E /* RBSafeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSafeKit-umbrella.h"; sourceTree = "<group>"; };
 		BEB3EB4F904E1FF01A4C721108A2AD4A /* RBSafeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSafeKit-prefix.pch"; sourceTree = "<group>"; };
-		C5CAF001E37EA3E38F6C1D6A3359681F /* NSMutableString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+RBSafe.m"; sourceTree = "<group>"; };
+		C0E1B3E64681C0DB2898714A6CDDED54 /* NSMutableDictionary+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+RBSafe.h"; sourceTree = "<group>"; };
+		C498B9201DE37AFE0A503F58D4BDDD3C /* NSMutableDictionary+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+RBSafe.m"; sourceTree = "<group>"; };
 		C64FD00C729EC3CE56AC02AB750E811C /* Pods-RBSafeKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RBSafeKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C9EE1F7CF5648ED47BF456490981D66E /* NSArray+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RBSafe.m"; sourceTree = "<group>"; };
 		CA3DB26205EA03A2C94DD9CD201AA706 /* Pods-RBSafeKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSafeKit_Example-resources.sh"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D0100B5A97FD4BCCEDD9BC34DD658763 /* Pods-RBSafeKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RBSafeKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D96E16A7CEDBEC102BBDD6D345BFE8CB /* Pods-RBSafeKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSafeKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		DA9FC4E6AA4072BC112473A4B7B1C123 /* NSDictionary+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RBSafe.h"; sourceTree = "<group>"; };
 		DAD61B326F3A5B281F386A9F16529555 /* Pods-RBSafeKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSafeKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DBDF00BC3C1CE11154F8D18E8685F5A1 /* NSMutableArray+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+RBSafe.h"; sourceTree = "<group>"; };
 		DC8AC4889C9F6BFDFF0046A5AD0CF5ED /* RBSafeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RBSafeKit-dummy.m"; sourceTree = "<group>"; };
+		E33C56B22EF371074158A7D4067AA797 /* NSObject+RBSafeSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBSafeSwizzle.m"; sourceTree = "<group>"; };
+		ED55E7E13BEF8105B64483228C796666 /* NSMutableAttributedString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+RBSafe.h"; sourceTree = "<group>"; };
 		F0527504A03CBFB3684033F13D6D05F0 /* Pods-RBSafeKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RBSafeKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		F2B6B5D636A59E6AF1DEFF0D67119235 /* NSString+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+RBSafe.m"; sourceTree = "<group>"; };
 		F99E629DB53788478027B9AC31A962AD /* RBSafeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RBSafeKit.xcconfig; sourceTree = "<group>"; };
 		F9B2A25FB9D15731A21E994C77D11084 /* Pods-RBSafeKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RBSafeKit_Example-dummy.m"; sourceTree = "<group>"; };
-		FDAC5AA430673DCF4F4B0285C520434A /* RBSafeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RBSafeKit.modulemap; sourceTree = "<group>"; };
+		FA0897CA11FC2BFBD59B591401C227C0 /* NSArray+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RBSafe.m"; sourceTree = "<group>"; };
+		FAD7323AAA0A7FC77CD23E670ED73051 /* NSMutableArray+RBSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+RBSafe.m"; sourceTree = "<group>"; };
+		FDAC5AA430673DCF4F4B0285C520434A /* RBSafeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RBSafeKit.modulemap; sourceTree = "<group>"; };
+		FEF1B6F8A4BF58DB8E53A02F95B7C4CD /* NSMutableString+RBSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+RBSafe.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +137,7 @@
 		0904D2413F9016E868A9ACDAF1FC08A6 /* RBSafeKit */ = {
 			isa = PBXGroup;
 			children = (
-				EF397C6C515C6CAA9748C124CD022714 /* RBSafeKit */,
+				F8F310358921947F51C0D2CB05622ACA /* RBSafeKit */,
 				154D1CB3F46F390B775596D51119C885 /* Support Files */,
 			);
 			name = RBSafeKit;
@@ -175,32 +183,6 @@
 			);
 			name = "Pods-RBSafeKit_Example";
 			path = "Target Support Files/Pods-RBSafeKit_Example";
-			sourceTree = "<group>";
-		};
-		5C5A0DA146C3FD106E69B90C906512EB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B2DB5188D7DFC3C365F1D8319F649514 /* NSArray+RBSafe.h */,
-				C9EE1F7CF5648ED47BF456490981D66E /* NSArray+RBSafe.m */,
-				73E4D3644B3A0E2420CA24A103511381 /* NSAttributedString+RBSafe.h */,
-				A69CF58425DF39106F65074CC363BCDA /* NSAttributedString+RBSafe.m */,
-				5AB054F3787374732E5F69992704C127 /* NSDictionary+RBSafe.h */,
-				028C9BF6F36E740662F28C0136B434C1 /* NSDictionary+RBSafe.m */,
-				DBDF00BC3C1CE11154F8D18E8685F5A1 /* NSMutableArray+RBSafe.h */,
-				0EBDD000291F62B41239A6F96809DC29 /* NSMutableArray+RBSafe.m */,
-				AEE1E5ECC657DD83183E97AEF29B044F /* NSMutableAttributedString+RBSafe.h */,
-				6F777573980A146D12EDCA3D37BEAB14 /* NSMutableAttributedString+RBSafe.m */,
-				7EF3487960018DD0F3830F8C2E0C7B50 /* NSMutableDictionary+RBSafe.h */,
-				5F0B4028BDD1779BB5ED95972FAA8A26 /* NSMutableDictionary+RBSafe.m */,
-				08B2D4498DDD4449EF0F8E78EA2217B0 /* NSMutableString+RBSafe.h */,
-				C5CAF001E37EA3E38F6C1D6A3359681F /* NSMutableString+RBSafe.m */,
-				A0B1EAAA7594ED7C464A8F60E543C3C8 /* NSString+RBSafe.h */,
-				F2B6B5D636A59E6AF1DEFF0D67119235 /* NSString+RBSafe.m */,
-				4E0B57F9EE769D02DF1BC4E3830AA0E2 /* RBSafeKit.h */,
-				256AF8A966EFD6FDA3D61CC54DCF09B7 /* RBSafeKit.m */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		61D5F77CB533C8B6460A223D9FCA4527 /* Development Pods */ = {
@@ -258,6 +240,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B92A48C4AE224CF0C84C95D25DBDFB83 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67CC79FAB685D61D64E5EEE907B270C2 /* NSArray+RBSafe.h */,
+				FA0897CA11FC2BFBD59B591401C227C0 /* NSArray+RBSafe.m */,
+				089ACC22700F3F0A390A0B5B311956EE /* NSAttributedString+RBSafe.h */,
+				9C70FF41E7955F54FDA22C0A01716255 /* NSAttributedString+RBSafe.m */,
+				DA9FC4E6AA4072BC112473A4B7B1C123 /* NSDictionary+RBSafe.h */,
+				57745CE5A26F47DFB9FB850C95A27060 /* NSDictionary+RBSafe.m */,
+				7C0644CABED9016919B7E03AED943A61 /* NSMutableArray+RBSafe.h */,
+				FAD7323AAA0A7FC77CD23E670ED73051 /* NSMutableArray+RBSafe.m */,
+				ED55E7E13BEF8105B64483228C796666 /* NSMutableAttributedString+RBSafe.h */,
+				386D64A21EFED2F80D5CBDE75DFB0181 /* NSMutableAttributedString+RBSafe.m */,
+				C0E1B3E64681C0DB2898714A6CDDED54 /* NSMutableDictionary+RBSafe.h */,
+				C498B9201DE37AFE0A503F58D4BDDD3C /* NSMutableDictionary+RBSafe.m */,
+				619FFFAF9FE17438D51C672264CB7B7D /* NSMutableSet+RBSafe.h */,
+				6627F8F3457DE26F675F540D960E8566 /* NSMutableSet+RBSafe.m */,
+				FEF1B6F8A4BF58DB8E53A02F95B7C4CD /* NSMutableString+RBSafe.h */,
+				40E4EE56FFD8E511EC7994B98AD63A00 /* NSMutableString+RBSafe.m */,
+				4D00D806A1E8D29580BF495A5BA11DF4 /* NSObject+RBSafeSwizzle.h */,
+				E33C56B22EF371074158A7D4067AA797 /* NSObject+RBSafeSwizzle.m */,
+				65AE655E60FDA46C34316C2C53E21D1D /* NSSet+RBSafe.h */,
+				104EAA8E0FA0F72836BBF61704151CDF /* NSSet+RBSafe.m */,
+				A51A0EF07354C3D86DF11E4AC76AF418 /* NSString+RBSafe.h */,
+				5E912486926F1DEC1550AE001B7CC305 /* NSString+RBSafe.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,12 +277,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF397C6C515C6CAA9748C124CD022714 /* RBSafeKit */ = {
+		F8F310358921947F51C0D2CB05622ACA /* RBSafeKit */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A0DA146C3FD106E69B90C906512EB /* Classes */,
+				B92A48C4AE224CF0C84C95D25DBDFB83 /* Classes */,
 			);
-			name = RBSafeKit;
 			path = RBSafeKit;
 			sourceTree = "<group>";
 		};
@@ -294,20 +304,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659EC12476A20874D445F33FFF9CE2D1 /* Headers */ = {
+		9024910A61C2AB76933A6F742EE8E145 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC20D95AD67524BD77FBD37939181E4 /* NSArray+RBSafe.h in Headers */,
-				0790C47FCF78E469E1162ED5BC71B2F7 /* NSAttributedString+RBSafe.h in Headers */,
-				67348F5E727630DCB3AF7735221F5542 /* NSDictionary+RBSafe.h in Headers */,
-				4BE26B6BCB872EA2BCE23AA2472689E6 /* NSMutableArray+RBSafe.h in Headers */,
-				69E9D9A62BC2C0798336747031E9CA43 /* NSMutableAttributedString+RBSafe.h in Headers */,
-				AFB6D5C54E941BD2083707F4C8479F04 /* NSMutableDictionary+RBSafe.h in Headers */,
-				4CC6E82A66E1CDA3547045DC60CDE9A0 /* NSMutableString+RBSafe.h in Headers */,
-				420CF6899F1909CABFFA79DE7FCED610 /* NSString+RBSafe.h in Headers */,
-				B269EE12B63BF04DEEC2CEAE264E1FF2 /* RBSafeKit-umbrella.h in Headers */,
-				45A5A4DEF368A384D178C63FACD767D9 /* RBSafeKit.h in Headers */,
+				11C65B7BABE8E1556E556E06935990CB /* NSArray+RBSafe.h in Headers */,
+				31B874F5AA941FB50A4CD61A90499205 /* NSAttributedString+RBSafe.h in Headers */,
+				E10782E5E6E6F2920EA7BE126D44F876 /* NSDictionary+RBSafe.h in Headers */,
+				88A0C81E770162F11FF51496B356524B /* NSMutableArray+RBSafe.h in Headers */,
+				205342F24226C4C4102D2B51BD6EE357 /* NSMutableAttributedString+RBSafe.h in Headers */,
+				C25BC6202B0EA8C8C4018CACC756A8F4 /* NSMutableDictionary+RBSafe.h in Headers */,
+				2CBCB97B5C036A3F74B887FE957667C5 /* NSMutableSet+RBSafe.h in Headers */,
+				231DE06DE601CEBE0B9DAFB6AA0DE7DB /* NSMutableString+RBSafe.h in Headers */,
+				DD8C2B6D7587327FA7DA589C5782978F /* NSObject+RBSafeSwizzle.h in Headers */,
+				F3A55043D8FF94F392B966F0542F7982 /* NSSet+RBSafe.h in Headers */,
+				3E1DD7D2022AFCD6FB6E9717EAE51B36 /* NSString+RBSafe.h in Headers */,
+				95C8B593521A6DC496C0A4C463B8578A /* RBSafeKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +365,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 531AC74DA327003D9F3BF24709DA668F /* Build configuration list for PBXNativeTarget "RBSafeKit" */;
 			buildPhases = (
-				3DE72666D8B55CCA45FC1A00401C7D25 /* Sources */,
+				894364B03FE2A935456C3B2C40E23DF1 /* Sources */,
 				B1BE1ADE7A87DCFBC06D635CF468689E /* Frameworks */,
-				659EC12476A20874D445F33FFF9CE2D1 /* Headers */,
+				9024910A61C2AB76933A6F742EE8E145 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -395,28 +407,30 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3DE72666D8B55CCA45FC1A00401C7D25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50517BC1C361EE233593B424E17156CB /* NSArray+RBSafe.m in Sources */,
-				6DEC2F514E00D4051853622D4668FB35 /* NSAttributedString+RBSafe.m in Sources */,
-				3B43D925270FC13CF5CBDA1920EDFAED /* NSDictionary+RBSafe.m in Sources */,
-				94B6EDB752AFFECFAA0779E8253AD389 /* NSMutableArray+RBSafe.m in Sources */,
-				11A7782F61E99E9BA69580CA44720080 /* NSMutableAttributedString+RBSafe.m in Sources */,
-				9FD8E27481CBE8B4303B317A0C6CBD31 /* NSMutableDictionary+RBSafe.m in Sources */,
-				EDFAE2CFCC80155409598F1C67CEC520 /* NSMutableString+RBSafe.m in Sources */,
-				DB5403B6C7656ADC553AF05F95409221 /* NSString+RBSafe.m in Sources */,
-				DC6D07E97E0C235B55B30D5EAB4AEFCA /* RBSafeKit-dummy.m in Sources */,
-				E64B1D9525FB236B9127B6ED2FCE8D0E /* RBSafeKit.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		46B647656DC7CE441F52CEA225D00195 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9A1D986E621151D6308BFDA84B263939 /* Pods-RBSafeKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		894364B03FE2A935456C3B2C40E23DF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9DEF2EBE3C3FAE40D0B673827071056 /* NSArray+RBSafe.m in Sources */,
+				4A42EAD8552A4D0A9095BCEA36C1CF8A /* NSAttributedString+RBSafe.m in Sources */,
+				4A5EE94C60BA1A84F3D9BC23AB0437F9 /* NSDictionary+RBSafe.m in Sources */,
+				0AFA4C9F95C13B81F68F827D0870B3AB /* NSMutableArray+RBSafe.m in Sources */,
+				C8CC3C343BEB2DA36AFF45BEA04111C3 /* NSMutableAttributedString+RBSafe.m in Sources */,
+				85A2AF27D7E547A27CE7003E90FC8347 /* NSMutableDictionary+RBSafe.m in Sources */,
+				06152F5605738C34481390655B9862A7 /* NSMutableSet+RBSafe.m in Sources */,
+				958DFED94588780964D19167847A49DA /* NSMutableString+RBSafe.m in Sources */,
+				52504A55A259C388C47FEA203EEEF8E4 /* NSObject+RBSafeSwizzle.m in Sources */,
+				9A7B4D788CEE9D648948207D695F9ED3 /* NSSet+RBSafe.m in Sources */,
+				45BE8EE037439B27AC1039539A13475D /* NSString+RBSafe.m in Sources */,
+				AD9F8FD0625BBD953DA6F06D4CB3C2BE /* RBSafeKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

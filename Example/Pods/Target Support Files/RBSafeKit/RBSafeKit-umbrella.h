@@ -16,7 +16,10 @@
 #import "NSMutableArray+RBSafe.h"
 #import "NSMutableAttributedString+RBSafe.h"
 #import "NSMutableDictionary+RBSafe.h"
+#import "NSMutableSet+RBSafe.h"
 #import "NSMutableString+RBSafe.h"
+#import "NSObject+RBSafeSwizzle.h"
+#import "NSSet+RBSafe.h"
 #import "NSString+RBSafe.h"
 #import "RBSafeKit.h"
 

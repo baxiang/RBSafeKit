@@ -7,7 +7,7 @@
 //
 
 #import "NSMutableArray+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSMutableArray (RBSafe)
 
 +(void)load {
@@ -18,20 +18,22 @@
         Class arrayMClass = NSClassFromString(@"__NSArrayM");
         
         //objectAtIndex:
-        [RBSafeKit exchangeInstanceMethod:arrayMClass methodOriginSel:@selector(objectAtIndex:) methodAddSel:@selector(RBSafe_objectAtIndex:)];
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(objectAtIndex:) withMethod:@selector(RBSafe_objectAtIndex:)];
         
         //setObject:atIndexedSubscript:
-        [RBSafeKit exchangeInstanceMethod:arrayMClass methodOriginSel:@selector(setObject:atIndexedSubscript:) methodAddSel:@selector(RBSafe_setObject:atIndexedSubscript:)];
-        
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(setObject:atIndexedSubscript:) withMethod:@selector(RBSafe_setObject:atIndexedSubscript:)];
         
         //removeObjectAtIndex:
-        [RBSafeKit exchangeInstanceMethod:arrayMClass methodOriginSel:@selector(removeObjectAtIndex:) methodAddSel:@selector(RBSafe_removeObjectAtIndex:)];
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(removeObjectAtIndex:) withMethod:@selector(RBSafe_removeObjectAtIndex:)];
         
         //insertObject:atIndex:
-        [RBSafeKit exchangeInstanceMethod:arrayMClass methodOriginSel:@selector(insertObject:atIndex:) methodAddSel:@selector(RBSafe_insertObject:atIndex:)];
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(insertObject:atIndex:) withMethod:@selector(RBSafe_insertObject:atIndex:)];
         
-        //getObjects:range:
-        [RBSafeKit exchangeInstanceMethod:arrayMClass methodOriginSel:@selector(getObjects:range:) methodAddSel:@selector(RBSafe_getObjects:range:)];
+        //replaceObjectAtIndex:withObject:
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(replaceObjectAtIndex:withObject:) withMethod:@selector(RBSafe_replaceObjectAtIndex:withObject:)];
+        
+        //removeObjectsInRange:
+        [NSMutableArray swizzleInstance:arrayMClass origMethod:@selector(removeObjectsInRange:) withMethod:@selector(RBSafe_removeObjectsInRange:)];
     });
     
 }
@@ -83,7 +85,7 @@
 }
 
 
-#pragma mark - set方法
+#pragma mark - insertObject:atIndex:
 - (void)RBSafe_insertObject:(id)anObject atIndex:(NSUInteger)index {
     @try {
         [self RBSafe_insertObject:anObject atIndex:index];
@@ -95,17 +97,31 @@
         
     }
 }
-
-
-#pragma mark - getObjects:range:
-
-- (void)RBSafe_getObjects:(__unsafe_unretained id  _Nonnull *)objects range:(NSRange)range {
+#pragma mark - replaceObjectAtIndex:withObject:
+- (void)RBSafe_replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
     @try {
-        [self RBSafe_getObjects:objects range:range];
-    } @catch (NSException *exception) {
-    } @finally {
+        [self RBSafe_replaceObjectAtIndex:index withObject:anObject];
+    }
+    @catch (NSException *exception) {
+      
+    }
+    @finally {
         
     }
+
+}
+#pragma mark - removeObjectsInRange:
+- (void)RBSafe_removeObjectsInRange:(NSRange)range{
+    @try {
+        [self RBSafe_removeObjectsInRange:range];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+
 }
 
 @end

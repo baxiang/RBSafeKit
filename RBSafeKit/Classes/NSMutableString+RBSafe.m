@@ -7,51 +7,45 @@
 //
 
 #import "NSMutableString+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSMutableString (RBSafe)
 +(void)load {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        
-        
         Class placeholderString = NSClassFromString(@"NSPlaceholderMutableString");
-        [RBSafeKit exchangeInstanceMethod:placeholderString methodOriginSel:@selector(initWithCString:encoding:) methodAddSel:@selector(hookInitWithCString:encoding:)];
-        [RBSafeKit exchangeInstanceMethod:placeholderString methodOriginSel:@selector(initWithString:) methodAddSel:@selector(RBSafe_initWithString:)];
-        Class stringClass = NSClassFromString(@"__NSCFString");
+        [NSMutableString swizzleInstance:placeholderString origMethod:@selector(initWithCString:encoding:) withMethod:@selector(RBSafe_initWithCString:encoding:)];
+        [NSMutableString swizzleInstance:placeholderString origMethod:@selector(initWithString:) withMethod:@selector(RBSafe_initWithString:)];
         
+        Class stringClass = NSClassFromString(@"__NSCFString");
         //insertString:atIndex:
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(insertString:atIndex:) methodAddSel:@selector(RBSafe_insertString:atIndex:)];
+        [NSMutableString swizzleInstance:stringClass origMethod:@selector(insertString:atIndex:) withMethod:@selector(RBSafe_insertString:atIndex:)];
         
         //replaceCharactersInRange
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(replaceCharactersInRange:withString:) methodAddSel:@selector(RBSafe_replaceCharactersInRange:withString:)];
+        [NSMutableString swizzleInstance:stringClass origMethod:@selector(replaceCharactersInRange:withString:) withMethod:@selector(RBSafe_replaceCharactersInRange:withString:)];
         
         //deleteCharactersInRange
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(deleteCharactersInRange:) methodAddSel:@selector(RBSafe_deleteCharactersInRange:)];
+        [NSMutableString swizzleInstance:stringClass origMethod:@selector(deleteCharactersInRange:) withMethod:@selector(RBSafe_deleteCharactersInRange:)];
     });
 }
-
+#pragma mark - initWithString:
 - (nullable instancetype)RBSafe_initWithString:(NSString *)aString{
     if (aString){
         return [self RBSafe_initWithString:aString];
     }
-    
     return nil;
-
 }
-#pragma mark - insertString:atIndex:
-
-- (nullable instancetype) hookInitWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding
+#pragma mark - initWithCString:encoding:
+- (nullable instancetype) RBSafe_initWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding
 {
     if (NULL != nullTerminatedCString){
-        return [self hookInitWithCString:nullTerminatedCString encoding:encoding];
+        return [self RBSafe_initWithCString:nullTerminatedCString encoding:encoding];
     }
-    
     return nil;
 }
 
-
+#pragma mark - insertString:atIndex:
 - (void)RBSafe_insertString:(NSString *)aString atIndex:(NSUInteger)loc {
     
     @try {

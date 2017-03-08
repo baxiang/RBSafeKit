@@ -7,7 +7,7 @@
 //
 
 #import "NSMutableDictionary+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSMutableDictionary (RBSafe)
 
 +(void)load  {
@@ -16,10 +16,10 @@
     dispatch_once(&onceToken, ^{
         Class dictionaryM = NSClassFromString(@"__NSDictionaryM");
         //setObject:forKey:
-        [RBSafeKit exchangeInstanceMethod:dictionaryM methodOriginSel:@selector(setObject:forKey:) methodAddSel:@selector(RBSafe_setObject:forKey:)];
+       [NSMutableDictionary swizzleInstance:dictionaryM origMethod:@selector(setObject:forKey:) withMethod:@selector(RBSafe_setObject:forKey:)];
     
         //removeObjectForKey:
-        [RBSafeKit exchangeInstanceMethod:dictionaryM methodOriginSel:@selector(removeObjectForKey:) methodAddSel:@selector(RBSafe_removeObjectForKey:)];
+        [NSMutableDictionary swizzleInstance:dictionaryM origMethod:@selector(removeObjectForKey:) withMethod:@selector(RBSafe_removeObjectForKey:)];
     });
 }
 

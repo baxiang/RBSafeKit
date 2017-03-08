@@ -7,39 +7,82 @@
 //
 
 #import "NSString+RBSafe.h"
-#import "RBSafeKit.h"
+#import "NSObject+RBSafeSwizzle.h"
 @implementation NSString (RBSafe)
 +(void)load {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
+        [NSString swizzleClass:[self class] origMethod:@selector(stringWithUTF8String:) withMethod:@selector(RBSafe_stringWithUTF8String:)];
+        [NSString swizzleClass:[self class] origMethod:@selector(stringWithCString:encoding:) withMethod:@selector(RBSafe_stringWithCString:encoding:)];
+        Class placeholderClass = NSClassFromString(@"NSPlaceholderString"); //[NSString alloc]
+        //initWithCString:encoding:
+        [NSString swizzleInstance:placeholderClass origMethod:@selector(initWithCString:encoding:) withMethod:@selector(RBSafe_initWithCString:encoding:)];
+        
         Class stringClass = NSClassFromString(@"__NSCFConstantString");
         
+         [NSString swizzleInstance:stringClass origMethod:@selector(stringByAppendingString:) withMethod:@selector(RBSafe_stringByAppendingString:)];
         //characterAtIndex
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(characterAtIndex:) methodAddSel:@selector(RBSafe_characterAtIndex:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(characterAtIndex:) withMethod:@selector(RBSafe_characterAtIndex:)];
         
         //substringFromIndex
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(substringFromIndex:) methodAddSel:@selector(RBSafe_substringFromIndex:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(substringFromIndex:) withMethod:@selector(RBSafe_substringFromIndex:)];
         
         //substringToIndex
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(substringToIndex:) methodAddSel:@selector(RBSafe_substringToIndex:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(substringToIndex:) withMethod:@selector(RBSafe_substringToIndex:)];
         
         //substringWithRange:
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(substringWithRange:) methodAddSel:@selector(RBSafe_substringWithRange:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(substringWithRange:) withMethod:@selector(RBSafe_substringWithRange:)];
         
         //stringByReplacingOccurrencesOfString:
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(stringByReplacingOccurrencesOfString:withString:) methodAddSel:@selector(RBSafe_StringByReplacingOccurrencesOfString:withString:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(stringByReplacingOccurrencesOfString:withString:) withMethod:@selector(RBSafe_StringByReplacingOccurrencesOfString:withString:)];
         
         //stringByReplacingOccurrencesOfString:withString:options:range:
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(stringByReplacingOccurrencesOfString:withString:options:range:) methodAddSel:@selector(RBSafe_stringByReplacingOccurrencesOfString:withString:options:range:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(stringByReplacingOccurrencesOfString:withString:options:range:) withMethod:@selector(RBSafe_stringByReplacingOccurrencesOfString:withString:options:range:)];
         
         //stringByReplacingCharactersInRange:withString:
-        [RBSafeKit exchangeInstanceMethod:stringClass methodOriginSel:@selector(stringByReplacingCharactersInRange:withString:) methodAddSel:@selector(RBSafe_stringByReplacingCharactersInRange:withString:)];
+        [NSString swizzleInstance:stringClass origMethod:@selector(stringByReplacingCharactersInRange:withString:) withMethod:@selector(RBSafe_stringByReplacingCharactersInRange:withString:)];
     });
     
 }
++ (nullable instancetype)RBSafe_stringWithUTF8String:(const char *)nullTerminatedCString{
+
+    if (NULL != nullTerminatedCString){
+        return [self RBSafe_stringWithUTF8String:nullTerminatedCString];
+    }
+    return nil;
+}
++ (nullable instancetype)RBSafe_stringWithCString:(const char *)cString encoding:(NSStringEncoding)enc{
+    if (NULL != cString){
+        return [self RBSafe_stringWithCString:cString encoding:enc];
+    }
+    return nil;
+}
+#pragma mark - initWithCString:encoding:
+- (nullable instancetype) RBSafe_initWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding
+{
+    if (NULL != nullTerminatedCString){
+        return [self RBSafe_initWithCString:nullTerminatedCString encoding:encoding];
+    }
+    return nil;
+}
 
 
+
+- (NSString *)RBSafe_stringByAppendingString:(NSString *)aString{
+    NSString *subString = self;
+    @try {
+        subString = [self RBSafe_stringByAppendingString:aString];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        return subString;
+    }
+
+}
 #pragma mark - characterAtIndex:
 
 - (unichar)RBSafe_characterAtIndex:(NSUInteger)index {
