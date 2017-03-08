@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RBSafeKit'
-  s.version          = '1.0.0'
+  s.version="1.0.0"
   s.summary          = '防止app crash的保护机制'
   s.homepage         = 'https://github.com/baxiang/RBSafeKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
