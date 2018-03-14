@@ -54,10 +54,7 @@
     [testString substringWithRange:NSMakeRange(0, 50)];
     
     [testString stringByReplacingOccurrencesOfString:nilStr withString:nilStr];
-    
-    
     NSString *str;
-   
     [testString stringByReplacingOccurrencesOfString:@"test" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(100, 1000)];
     
      char *strChr = NULL;
