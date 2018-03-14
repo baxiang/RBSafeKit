@@ -16,7 +16,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
     NSString *nilStr = nil;
     NSArray *emArray = [NSArray new];
     NSArray *singlArray = @[@"1"];
@@ -30,8 +29,6 @@
     strings[1] = @"2";
     [NSArray arrayWithObjects:strings count:2];
     [NSArray arrayWithObjects: nilStr, nil ];
-    
-    
     
     NSMutableArray *mutableArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3", nil];
     [mutableArray removeObjectAtIndex:5];
