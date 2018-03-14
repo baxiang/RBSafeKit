@@ -36,9 +36,7 @@ pod "RBSafeKit"
 V1.0.0
 字符串(NSString、NSMutableString、NSAttributedString、NSMutableAttributedString)、数组(NSArray、NSMutableArray、NSSet、NSMutableSet)、字典（NSDictionary、NSMutableDictionary） 非法参数和越界的crash保护
 ## Author
-
-baxiang baxiang1989@qq.com
-
+baxiang baxiang1989@163.com
 ## License
 
 RBSafeKit is available under the MIT license. See the LICENSE file for more info.
